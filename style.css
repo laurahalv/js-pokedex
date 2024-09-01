@@ -1,0 +1,150 @@
+:root {
+  --cor: #ffce31;
+}
+@font-face {
+  font-family: pokemonFont;
+  src: url(Pokemon\ Solid.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: pokemonFont;
+}
+body {
+  text-align: center;
+  min-height: 100vh;
+  background: rgb(255, 206, 49);
+  background: radial-gradient(
+    circle,
+    rgba(255, 206, 49, 1) 37%,
+    rgba(60, 51, 152, 1) 78%,
+    rgba(2, 0, 101, 1) 93%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#logoPokedex {
+  margin-top: 15px;
+}
+main {
+  position: relative;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.pokedex {
+  width: 100%;
+}
+
+.dadospokemon {
+  position: absolute;
+  color: var(--cor);
+  top: 10%;
+  left: 25%;
+  font-size: clamp(5px, 5vw, 18px);
+  text-shadow: 1px 2px #3c3398, 2px 3px #020065;
+}
+
+.tipopokemon {
+  left: auto;
+}
+.form {
+  position: absolute;
+  min-width: 50%;
+  max-width: 100%;
+  top: 23%;
+  left: 48%;
+  transform: translate(-50%, 0);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.068),
+    rgba(0, 0, 0, 0),
+    black
+  );
+  background-size: 100% 0%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+::placeholder {
+  color: var(--cor);
+}
+
+input[type="search"],
+textarea {
+  color: var(--cor);
+  outline: transparent;
+  border: 0;
+  background: transparent;
+  border-radius: 5px;
+  padding: 0.6%;
+  text-shadow: 1px 2px #3c3398, 2px 3px #020065;
+  caret-color: black;
+}
+.botao:hover {
+  cursor: pointer;
+}
+
+.botoes {
+  display: inline-flex;
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  gap: 4.6em;
+}
+.botao {
+  color: var(--cor);
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  text-shadow: 1px 2px #3c3398, 2px 3px #020065;
+}
+.fotopokemon {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  min-height: 20%;
+  max-height: 20%;
+  min-width: 20%;
+  max-width: 20%;
+}
+.dadospokemon {
+  text-transform: capitalize;
+}
+
+@media (max-width: 320px) {
+  * {
+    font-size: clamp(10px, 4vw, 10px);
+  }
+  .form {
+    left: 48%;
+    top: 25.9%;
+  }
+  .botoes {
+    gap: 5.6em;
+    top: 34%;
+    left: 49%;
+  }
+  #logoPokedex {
+    display: flex;
+    width: 95%;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  .form {
+    left: 52%;
+    top: 25.9%;
+  }
+  .botoes {
+    gap: 3em;
+    top: 34%;
+  }
+  #logoPokedex {
+    display: flex;
+    width: 95%;
+  }
+}
