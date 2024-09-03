@@ -1,6 +1,6 @@
 <h2>Pokédex</h2>
 <p>
-  Uma Pokédex simples que usa a PokeAPI e pega o número ou o nome do pokémon e
+  Uma Pokédex simples que usa a PokeAPI e pega o número ou o nome do pokémon (até a geração V) e
   mostra o sprite animado dele.
 </p>
 <hr />
